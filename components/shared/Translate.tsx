@@ -29,7 +29,10 @@ const Translate: React.FC = () => {
 
   return (
     <div>
-      <div id="google_translate_element"></div>
+      <div
+        id="google_translate_element"
+        className="bg-white p-2 p-bold-20 w-[130px]"
+      ></div>
     </div>
   );
 };

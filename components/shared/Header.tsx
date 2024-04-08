@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import NavItems from "./NavItems";
+import { Separator } from "../ui/separator";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -15,11 +16,11 @@ const Header = () => {
   return (
     <header className="w-full border-b">
       <div className="wrapper flex items-center justify-between">
-        <Link href="/" className="w-36">
+        <Link href="/" className="w-[150px] lg:w-[250px]">
           <Image
             src="/assets/images/logo_hirogh-280x50.png"
-            width={128}
-            height={38}
+            width={300}
+            height={100}
             alt="JHSD logo"
           />
         </Link>
@@ -41,18 +42,20 @@ const Header = () => {
       </div>
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav
+            ? "z-10 md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
+            : ""
         }
       >
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[370px] md:w-[45%] h-screen bg-white py-10 px-5 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[300px] h-screen bg-white py-10 px-5 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-5 pr-10 pl-10 ease-in duration-500"
           }
         >
           <div>
-            <div className="flex w-full items-center justify-between">
+            <div className="flex w-full items-center justify-between mb-3">
               <Link href="/" className="w-36">
                 <Image
                   src="/assets/images/logo_hirogh-280x50.png"
@@ -75,6 +78,9 @@ const Header = () => {
               </div>
             </div>
           </div>
+
+          <Separator />
+
           <div className="py-4 flex flex-col cursor-pointer">
             <ul className="flex md:flex-between w-full flex-col items-start gap-5 md:flex-row">
               <NavItems />
