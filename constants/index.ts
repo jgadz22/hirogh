@@ -1,14 +1,23 @@
 export const headerLinksJapanese = [
   {
-    label: "ホーム",
+    label: {
+      en: "Home",
+      ja: "ホーム",
+    },
     route: "/",
   },
   {
-    label: "会社概要",
+    label: {
+      en: "Company Profile",
+      ja: "会社概要",
+    },
     route: "https://hirogh.co.jp/company/",
   },
   {
-    label: "お問い合わせ",
+    label: {
+      en: "Contact",
+      ja: "お問い合わせ",
+    },
     route: "https://hirogh.co.jp/contact/",
   },
 ];
@@ -33,5 +42,30 @@ export const secondComponent = [
     id: "4",
     image: "/assets/images/photo_profile7-1.jpg",
     details: ["不動産業"],
+  },
+];
+
+export const secondComponent_eng = [
+  {
+    id: "1",
+    image: "/assets/images/photo_profile8.jpg",
+    details: ["Paid employment placement business worker dispatch business"],
+  },
+  {
+    id: "2",
+    image: "/assets/images/photo_profile6.jpg",
+    details: [
+      "Human resource development projects for medical care, welfare, etc.",
+    ],
+  },
+  {
+    id: "3",
+    image: "/assets/images/photo_profile2.jpg",
+    details: ["Sales and leasing of bonsai and gardening supplies"],
+  },
+  {
+    id: "4",
+    image: "/assets/images/photo_profile7-1.jpg",
+    details: ["Real Estate Business"],
   },
 ];

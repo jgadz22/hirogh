@@ -24,7 +24,7 @@ const Card = ({ id, image, details }: CardProps) => {
           <div className="bg-black/50 text-white group-hover:text-black group-hover:bg-white/50 w-[300px] flex items-center justify-center absolute">
             <ul className="flex items-center justify-center flex-col pb-2 lg:pb-4 px-2">
               <li className="w-full flex justify-center items-center">
-                <p className="w-full p-medium-16 group-hover:p-hover-16 lg:p-medium-20 lg:group-hover:p-bold-20 text-center justify-center items-center underline underline-offset-8 decoration-sky-300 group-hover:decoration-sky-700 tracking-wide p-1 duration-300">
+                <p className="w-full p-medium-16 group-hover:p-bold-16 lg:p-regular-18 lg:group-hover:p-semibold-18 text-center justify-center items-center underline underline-offset-8 decoration-sky-300 group-hover:decoration-sky-700 tracking-wide p-1 duration-300">
                   {details.map((detail) => {
                     return (
                       <span key={detail}>

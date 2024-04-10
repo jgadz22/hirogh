@@ -5,8 +5,9 @@ import Link from "next/link";
 import React, { useState } from "react";
 import NavItems from "./NavItems";
 import { Separator } from "../ui/separator";
+import Translation from "./Translation";
 
-const Header = () => {
+const Header = ({ handleLanguageChange, language }: any) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -25,11 +26,16 @@ const Header = () => {
           />
         </Link>
 
-        <div>
+        <div className="flex gap-5">
+          <Translation handleLanguageChange={handleLanguageChange} />
+
           <ul className="hidden md:flex-between w-full flex-col items-start gap-5 md:flex-row">
-            <NavItems />
+            <NavItems language={language} />
           </ul>
-          <div onClick={handleNav} className="md:hidden">
+          <div
+            onClick={handleNav}
+            className="md:hidden flex items-center justify-center"
+          >
             <Image
               src="/assets/icons/menu.svg"
               alt="menu"
@@ -83,7 +89,7 @@ const Header = () => {
 
           <div className="py-4 flex flex-col cursor-pointer">
             <ul className="flex md:flex-between w-full flex-col items-start gap-5 md:flex-row">
-              <NavItems />
+              <NavItems language={language} />
             </ul>
           </div>
         </div>

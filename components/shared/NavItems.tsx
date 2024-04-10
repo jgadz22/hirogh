@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const NavItems = () => {
+const NavItems = ({ language }: any) => {
   const pathname = usePathname();
 
   return (
@@ -19,7 +19,9 @@ const NavItems = () => {
               isActive && "text-primary-500"
             } flex-center p-medium-18 whitespace-nowrap`}
           >
-            <Link href={link.route}>{link.label}</Link>
+            <Link href={link.route}>
+              {language === "en" ? link.label.en : link.label.ja}
+            </Link>
           </li>
         );
       })}
