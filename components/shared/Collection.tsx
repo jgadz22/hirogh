@@ -7,13 +7,17 @@ const Collection = () => {
   return (
     <>
       <div className="w-full flex flex-col items-center">
-        <ul className="grid grid-cols-1 gap-5 xl:gap-10 lg:grid-cols-2 transition-all duration-500">
+        <ul className="grid grid-cols-1 lg:grid-cols-2 transition-all duration-500">
           {secondComponent.map((history) => {
             return (
               <li key={history.id} className="w-full flex justify-center">
                 <Link href="https://hirogh.co.jp/company/">
                   {" "}
-                  <Card image={history.image} details={history.details} />
+                  <Card
+                    id={history.id}
+                    image={history.image}
+                    details={history.details}
+                  />
                 </Link>
               </li>
             );

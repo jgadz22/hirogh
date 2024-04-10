@@ -31,7 +31,7 @@ const Translate: React.FC = () => {
     <div>
       <div
         id="google_translate_element"
-        className="bg-white p-2 p-bold-20 w-[130px]"
+        className="bg-white/50 p-1 p-bold-20 w-[130px] flex items-center justify-center"
       ></div>
     </div>
   );

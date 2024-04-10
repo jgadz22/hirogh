@@ -1,7 +1,7 @@
 export const headerLinksJapanese = [
   {
     label: "ホーム",
-    route: "https://hirogh.co.jp/",
+    route: "/",
   },
   {
     label: "会社概要",
